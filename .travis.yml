@@ -2,4 +2,4 @@ osx_image: xcode8.2
 before_install:
   - pip install --user awscli
   - export PATH=$PATH:$HOME/.local/bin
-script: curl "https://api.sightr.io/uploadscript?branch=$TRAVIS_BRANCH&ci=travis&build=$TRAVIS_BUILD_NUMBER&repoKey=594aca5834287328edb4f1be&directory=screenshots&commit=$TRAVIS_COMMIT" | bash
+script: curl "https://api.sightr.io/uploadscript?branch=$TRAVIS_PULL_REQUEST_BRANCH&ci=travis&build=$TRAVIS_BUILD_NUMBER&repoKey=594aca5834287328edb4f1be&directory=screenshots&commit=$TRAVIS_PULL_REQUEST_SHA" | bash
